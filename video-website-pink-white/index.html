@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Lecture Vidéo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur notre site de lecture vidéo</h1>
+    </header>
+    <main>
+        <section id="cover-section">
+            <img src="cover.png" alt="Image de couverture" style="width:100%;max-width:800px;">
+        </section>
+        <section id="menu-section">
+            <h2>Choisissez une vidéo</h2>
+            <button onclick="playVideo('video1.mp4')">Lire Vidéo 1</button>
+            <button onclick="playVideo('video2.mp4')">Lire Vidéo 2</button>
+        </section>
+        <section id="video-section">
+            <video id="videoPlayer" controls>
+                <source id="videoSource" src="video1.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la balise vidéo HTML5.
+            </video>
+        </section>
+    </main>
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas la balise audio HTML5.
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            backgroundMusic.play();
+        });
+
+        function playVideo(videoFile) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            const videoSource = document.getElementById('videoSource');
+            videoSource.src = videoFile;
+            videoPlayer.load();
+            videoPlayer.play();
+        }
+    </script>
+</body>
+</html>

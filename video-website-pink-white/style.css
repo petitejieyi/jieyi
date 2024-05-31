@@ -1,0 +1,52 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc0cb;
+    color: #fff;
+    text-align: center;
+    cursor: url('custom-cursor.png'), auto;
+}
+
+header {
+    background-color: #ff69b4;
+    padding: 20px;
+    color: #fff;
+}
+
+#cover-section img {
+    width: 100%;
+    max-width: 800px;
+    border: 5px solid #fff;
+    margin: 20px 0;
+}
+
+#menu-section {
+    margin: 20px 0;
+}
+
+#menu-section button {
+    background-color: #ff1493;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#menu-section button:hover {
+    background-color: #ff69b4;
+}
+
+#video-section {
+    margin: 20px 0;
+}
+
+video {
+    width: 80%;
+    max-width: 800px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
